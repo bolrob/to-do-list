@@ -1,0 +1,17 @@
+.todo-button {
+    width: 100px;
+    height: 50px;
+    justify-content: center;
+}
+
+.header {
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    font-size: 2rem;
+    size: 100%;
+}
+.main {
+    background-color: grey;
+
+}
