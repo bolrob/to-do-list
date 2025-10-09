@@ -1,17 +1,65 @@
-.todo-button {
-    width: 100px;
-    height: 50px;
+body {
     justify-content: center;
+    align-items: self-start;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 20px;
 }
 
-.header {
-    justify-content: center;
-    text-align: center;
-    background-color: white;
-    font-size: 2rem;
-    size: 100%;
-}
 .main {
-    background-color: grey;
+    border-radius: 14px;
+    width: 60%;
+    padding: 20px;
+}
 
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.todo-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    padding: 0.5em;
+}
+
+.todo-input {
+    flex: 1;
+    padding: 15px;
+}
+
+.todo-input-button {
+    width: 50px;
+    height: 50px;
+}
+
+.print-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.todo-item {
+    background-color: #f4f7f8;
+    display: flex;
+    flex-direction: row;
+    flex: content;
+    width: 100%;
+    gap: 10px;
+}
+
+.item-text {
+    margin: 1em;
+    padding: 0.5em;
+    background-color: lightgrey;
+    border-radius: 3px;
+    outline-color: black;
+    flex: 1;
+}
+
+.item-edit-button, .item-delete-button {
+    margin: 1em;
+    padding: 0.5em;
+    width: 125px;
 }

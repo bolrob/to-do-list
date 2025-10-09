@@ -11,7 +11,7 @@ function submit(event) {
     });
     printItems(todoItems);
     item.value = "";
-    console.log(todoItems)
+    console.log(todoItems);
 }
 
 function printItems(todoItems){
@@ -21,19 +21,25 @@ function printItems(todoItems){
 
 function renderItem(printContainer, [id, {value}]) {
     const item = document.createElement("div");
-    const elementExsists = printContainer.querySelector(`[id="${id}"]`)
-    if (elementExsists) {
-        return
+    const elementExists = printContainer.querySelector(`[id="${id}"]`);
+    if (elementExists) {
+        return;
     }
     item.setAttribute("id", id);
-    item.textContent = value;
+    item.setAttribute("class", "todo-item");
+    const text = document.createElement("div");
     const editButton = document.createElement("button");
     const deleteButton = document.createElement("button");
+    text.setAttribute("class", "item-text");
+    editButton.setAttribute("class", "item-edit-button");
+    deleteButton.setAttribute("class", "item-delete-button");
+    text.textContent = value;
     editButton.textContent = "Редактировать";
     deleteButton.textContent = "Удалить";
+    item.appendChild(text)
     item.appendChild(editButton);
     item.appendChild(deleteButton);
-    printContainer.append(item)
+    printContainer.append(item);
     
 }
 
